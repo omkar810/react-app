@@ -1,25 +1,55 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from "./Template/Home";
+import Portfolio from "./Template/Portfolio";
+import About from "./Template/About";
+import Contact from "./Template/Contact";
+import Header from "./Template/Header";
+import Footer from "./Template/Footer";
+import Login from "./Template/Login";
+import Register from "./Template/Register";
+import Forgot from './Template/Forgot';
+import { Switch, Route } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Switch>
+      <Route exact path="/">
+        <Header />
+        <Home />
+        <Footer />
+      </Route>
+      <Route path="/portfolio">
+        <Header />
+        <Portfolio />
+        <Footer />
+      </Route>
+      <Route path="/about">
+        <Header />
+        <About />
+        <Footer />
+      </Route>
+      <Route path="/contact">
+        <Header />
+        <Contact />
+        <Footer />
+      </Route>
+      <Route path="/login">
+        <Header />
+        <Login />
+        <Footer />
+      </Route>
+      <Route path="/register">
+        <Header />
+        <Register />
+        <Footer />
+      </Route>
+      <Route path="/forgot">
+        <Header />
+        <Forgot />
+        <Footer />
+      </Route>
+    </Switch>
+  )
 }
-
 export default App;

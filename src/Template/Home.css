@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.welcome{
+    background-color: grey;
+    color: white;
+    display: flex;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.welcome h1{
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 8s steps(18) infinite;
+    font-weight: normal;
+    border-right: 2px solid white;
+}
+@keyframes text {
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 18ch;
+    }
+}
+.slider{
+    overflow: hidden;
+}
+figure{
+    width: 500%;
+    left: 0;
+    position: relative;
+    margin: 0;
+    animation: 15s slider infinite;
+}
+.slider figure img{
+    width: 20%;
+    float: left;
+    height: 100vh;
+}
+@keyframes slider {
+    0%{left: 0;}
+    20%{left: 0;}
+    25%{left: -100%;}
+    45%{left: -100%;}
+    50%{left: -200%;}
+    70%{left: -200%;}
+    75%{left: -300%;}
+    95%{left: -300%;}
+    100%{left: -400%;}
+}
+@media only screen and (max-width:928px){
+    .welcome{
+        border:none;
+        background-color: grey;
+        color: white;
+        display: flex;
+        height: 15vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcome h1{
+        font-size: 30px;
+    }
+    .por{
+        height: 85vh;
+        background: url('./por-bg.jpg') no-repeat center center/cover;
+    }
+    .slider figure img{
+        height: 50vh;
+    }
+    .slider figure{
+        border-top: 3px solid grey;
+    }
+    .slider{
+        margin-top: 15%;
+        margin-bottom: 50%;
+    }
+    
+}
